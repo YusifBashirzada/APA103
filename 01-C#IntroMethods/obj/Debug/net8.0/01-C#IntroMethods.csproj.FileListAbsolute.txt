@@ -1,0 +1,15 @@
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.AssemblyInfoInputs.cache
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.AssemblyInfo.cs
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.csproj.CoreCompileInputs.cache
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.sourcelink.json
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\bin\Debug\net8.0\01-C#IntroMethods.exe
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\bin\Debug\net8.0\01-C#IntroMethods.deps.json
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\bin\Debug\net8.0\01-C#IntroMethods.runtimeconfig.json
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\bin\Debug\net8.0\01-C#IntroMethods.dll
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\bin\Debug\net8.0\01-C#IntroMethods.pdb
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.dll
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\refint\01-C#IntroMethods.dll
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.pdb
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\01-C#IntroMethods.genruntimeconfig.cache
+C:\Users\MSI\OneDrive\Sənədlər\Code Academy\APA103\01-C#IntroMethods\obj\Debug\net8.0\ref\01-C#IntroMethods.dll
