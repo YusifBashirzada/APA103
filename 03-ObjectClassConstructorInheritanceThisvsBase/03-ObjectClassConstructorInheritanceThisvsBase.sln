@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-ObjectClassConstructorInheritanceThisvsBase", "03-ObjectClassConstructorInheritanceThisvsBase.csproj", "{0948942B-670B-4B34-B885-D9B33D3A5E95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0948942B-670B-4B34-B885-D9B33D3A5E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0948942B-670B-4B34-B885-D9B33D3A5E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0948942B-670B-4B34-B885-D9B33D3A5E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0948942B-670B-4B34-B885-D9B33D3A5E95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6C9D3F5-D529-44AF-9009-73E64B51B69D}
+	EndGlobalSection
+EndGlobal
