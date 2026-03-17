@@ -1,0 +1,15 @@
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.AssemblyInfoInputs.cache
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.AssemblyInfo.cs
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.sourcelink.json
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\bin\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.exe
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\bin\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.deps.json
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\bin\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.runtimeconfig.json
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\bin\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.dll
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\bin\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.pdb
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.dll
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\refint\04-AccessModifiresEncupsulationNamespace.dll
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.pdb
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\04-AccessModifiresEncupsulationNamespace.genruntimeconfig.cache
+C:\Users\MSI\Desktop\APA103\04-AccessModifiresEncupsulationNamespace\obj\Debug\net8.0\ref\04-AccessModifiresEncupsulationNamespace.dll
