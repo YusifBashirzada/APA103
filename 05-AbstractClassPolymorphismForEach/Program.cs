@@ -7,14 +7,8 @@ namespace _05_AbstractClassPolymorphismForEach
 {
     public class Program
        {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Vehicle vehicle = new Vehicle("Toyota", "Corolla", 2020, "10-AB-123");
-
-            Console.WriteLine(vehicle.GetVehicleInfo());
-
-            Console.WriteLine("Esas Melumatlar:");
-            vehicle.ShowBasicInfo();
 
             Car car1 = new Car()
             {
@@ -51,6 +45,11 @@ namespace _05_AbstractClassPolymorphismForEach
                 _MaxSpeed = 180,
                 _FuelLevel = 100
             };
+
+            Console.WriteLine(car1.GetVehicleInfo());
+
+            Console.WriteLine("Esas Melumatlar:");
+            car1.ShowBasicInfo();
 
             Console.WriteLine();
 

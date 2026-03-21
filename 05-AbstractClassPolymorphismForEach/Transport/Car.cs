@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _05_AbstractClassPolymorphismForEach.Transport
 {
-    internal class Car:Vehicle
+    internal class Car : Vehicle
     {
         public int _DoorsCount;
         public int _TrunkCapacity;
@@ -50,6 +50,20 @@ namespace _05_AbstractClassPolymorphismForEach.Transport
             double serf = 25;
             double cost = (distance / 100) * serf * 1.80;
             return cost;
+        }
+
+        public override string GetVehicleInfo()
+        {
+            return $"{_Brand}{_Model}{_Year}{_PlateNumber}{_FuelLevel}";
+        }
+
+        public override void ShowBasicInfo()
+        {
+            Console.WriteLine($"Brand: {_Brand}");
+            Console.WriteLine($"Model: {_Model}");
+            Console.WriteLine($"Year: {_Year}");
+            Console.WriteLine($"PlateNumber: {_PlateNumber}");
+            Console.WriteLine($"FuelLevel: {_FuelLevel}");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _05_AbstractClassPolymorphismForEach.Transport
 {
-    internal class Vehicle
+    public abstract class Vehicle
     {
         public string _Brand;
         public string _Model;
@@ -44,18 +44,10 @@ namespace _05_AbstractClassPolymorphismForEach.Transport
             _FuelLevel = FuelLevel;
         }
 
-        public string GetVehicleInfo()
-        {
-            return $"{_Brand}{_Model}{_Year}{_PlateNumber}{_FuelLevel}";
-        }
+        public abstract string GetVehicleInfo();
 
-        public void ShowBasicInfo()
-        {
-            Console.WriteLine($"Brand: {_Brand}");
-            Console.WriteLine($"Model: {_Model}");
-            Console.WriteLine($"Year: {_Year}");
-            Console.WriteLine($"PlateNumber: {_PlateNumber}");
-            Console.WriteLine($"FuelLevel: {_FuelLevel}");
-        }
+        public abstract void ShowBasicInfo();
+
+
     }
 }

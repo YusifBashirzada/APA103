@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _05_AbstractClassPolymorphismForEach.Transport
 {
-    internal class Truck:Vehicle
+    internal class Truck : Vehicle
     {
         public double _CargoCapacity;
         public int _AxleCount;
@@ -31,6 +31,18 @@ namespace _05_AbstractClassPolymorphismForEach.Transport
             return cost;
         }
 
-        
+        public override string GetVehicleInfo()
+        {
+            return $"{_Brand}{_Model}{_Year}{_PlateNumber}{_FuelLevel}";
+        }
+
+        public override void ShowBasicInfo()
+        {
+            Console.WriteLine($"Brand: {_Brand}");
+            Console.WriteLine($"Model: {_Model}");
+            Console.WriteLine($"Year: {_Year}");
+            Console.WriteLine($"PlateNumber: {_PlateNumber}");
+            Console.WriteLine($"FuelLevel: {_FuelLevel}");
+        }
     }
 }
