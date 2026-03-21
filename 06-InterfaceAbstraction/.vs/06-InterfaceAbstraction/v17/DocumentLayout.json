@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA2283D-00F7-44A1-98DE-138F60676D0C}|06-InterfaceAbstraction.csproj|c:\\users\\msi\\desktop\\apa103\\06-interfaceabstraction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA2283D-00F7-44A1-98DE-138F60676D0C}|06-InterfaceAbstraction.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA2283D-00F7-44A1-98DE-138F60676D0C}|06-InterfaceAbstraction.csproj|c:\\users\\msi\\desktop\\apa103\\06-interfaceabstraction\\models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA2283D-00F7-44A1-98DE-138F60676D0C}|06-InterfaceAbstraction.csproj|solutionrelative:models\\calculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBA2283D-00F7-44A1-98DE-138F60676D0C}|06-InterfaceAbstraction.csproj|c:\\users\\msi\\desktop\\apa103\\06-interfaceabstraction\\interface\\icalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBA2283D-00F7-44A1-98DE-138F60676D0C}|06-InterfaceAbstraction.csproj|solutionrelative:interface\\icalculation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calculation.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\Models\\Calculation.cs",
+              "RelativeDocumentMoniker": "Models\\Calculation.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\Models\\Calculation.cs",
+              "RelativeToolTip": "Models\\Calculation.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:56:49.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICalculation.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\Interface\\ICalculation.cs",
+              "RelativeDocumentMoniker": "Interface\\ICalculation.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\Interface\\ICalculation.cs",
+              "RelativeToolTip": "Interface\\ICalculation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:56:38.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\APA103\\06-InterfaceAbstraction\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:55:02.335Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
