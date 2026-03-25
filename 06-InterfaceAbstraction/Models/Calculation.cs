@@ -22,16 +22,20 @@ namespace _06_InterfaceAbstraction.Models
             {
                 case '+':
                     Console.WriteLine("Netice: " + (a + b));
-                    return;
+                    break;
                 case '-':
                     Console.WriteLine("Netice: " + (a - b));
-                    return;
+                    break;
                 case '*':
                     Console.WriteLine("Netice: " +  (a * b));
-                    return;
+                    break;
                 case '/':
-                    Console.WriteLine("Netice: " + (a / b));
-                    return;
+                    if (b != 0) Console.WriteLine("Netice: " + (a / b));
+                    else Console.WriteLine("0-a bolme yoxdur!");
+                    break;
+                default:
+                    Console.WriteLine("Duzgun emel daxil edin");
+                    break;
             }
         }
     }
