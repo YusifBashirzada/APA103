@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tasks</title>
+    <style>
+        table { margin-top: 15px; border: 1px solid black;}
+        caption { font-weight: bold; font-size: 20px; }
+        td, th { padding: 8px;  border: 1px solid black;}
+        #table7 td { font-weight: bold; }
+        #table7,  #table7 td,  #table7 th { border: 3px solid black; }
+        #table10, #table10 td { border: 2px solid #2e5d2e;}
+        #table9 { width: 600px; }
+    </style>
+</head>
+
+<body>
+    <!-- Table 1 -->
+    <table style="border-spacing: 3px;"> 
+        <caption>Table 1</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Harry Depp</td>
+            <td>28</td>
+            <td>Britian</td>
+        </tr>
+        <tr>
+            <td>John Smith</td>
+            <td>35</td>
+            <td>USA</td>
+        </tr>
+        <tr>
+            <td>Ram Krishna</td>
+            <td>19</td>
+            <td>Nepal</td>
+        </tr>
+    </table>
+
+    <!-- Table 2 -->
+    <table style="border-spacing: 10px;">
+        <caption>Table 2</caption>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Butter</td>
+            <td>3 Kilogram</td>
+        </tr>
+        <tr>
+            <td>Milk</td>
+            <td>3 Liters</td>
+        </tr>
+    </table>
+
+    <!-- Table 3 -->
+    <table>
+         <caption>Table 3 - Product Info</caption>
+         <tr>
+            <th>Product</th>
+            <th>Flavors</th>
+         </tr>
+         <tr>
+            <td rowspan="3">Milk</td>
+            <td>Almond</td>
+         </tr>
+         <tr>
+            <td>Mango</td>
+         </tr>
+         <tr>
+            <td>Chocolate</td>
+         </tr>
+         <tr>
+            <td colspan="2">These are exclusive flavors</td>
+         </tr>
+    </table>
+
+    <!-- Table 5 -->
+    <table style="border-collapse: collapse; height: 200px;">
+        <caption>Table 5</caption>
+        <tr>
+            <td rowspan="6">section</td>
+            <td rowspan="3">subsection 1</td>
+            <td style="width: 150px;">text 1</td>
+        </tr>
+        <tr>
+            <td>text 2</td>
+        </tr>
+        <tr>
+            <td>text 3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">subsection 2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>subsection 3</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- Table 7 -->
+    <table id="table7" style="border-collapse: collapse;">
+        <caption>Table 7</caption>
+        <tr style="text-decoration: underline;">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td rowspan="3">1</td>
+            <td rowspan="3">David</td>
+            <td>Maths</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Computers</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td rowspan="3">2</td>
+            <td rowspan="3">Alex</td>
+            <td>Maths</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>70</td>
+        </tr>
+        <tr>
+            <td>Computers</td>
+            <td>90</td>
+        </tr>
+    </table>
+
+    <!-- Table 9 -->
+    <table id="table9" style="border-spacing: 5px;">
+        <caption>Table 9</caption>
+        <tr>
+            <th colspan="6">Time Table</th>
+        </tr>
+        <tr>
+            <th rowspan="6">Hours</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <th colspan="5">Lunch</th>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td rowspan="2">Project</td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>Maths</td>
+            <td>Computer</td>
+            <td>Maths</td>
+        </tr>
+    </table>
+
+    <!-- Table 10 -->
+    <table id="table10" style="width: 400px; text-align: center;">
+        <caption>Table 10 - Table in HTML</caption>
+        <tr>
+            <td rowspan="2">A</td>
+            <td>B</td>
+            <td rowspan="3">D</td>
+            <td colspan="2">E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td rowspan="2">G</td>
+            <td rowspan="2">H</td>
+            <td rowspan="2">I</td>
+        </tr>
+        <tr>
+            <td colspan="2">J</td>
+        </tr>
+        <tr>
+            <td colspan="3">K</td>
+            <td>L</td>
+            <td colspan="2">M</td>
+        </tr>
+    </table>
+</body>
+
+</html>
