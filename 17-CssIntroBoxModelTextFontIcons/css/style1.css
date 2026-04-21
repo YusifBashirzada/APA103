@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Hamilton';
+  src: url('../fonts/hamilton font/Richard Hamilton.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'HamiltonItalic';
+  src: url('../fonts/hamilton font/Richard Hamilton Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TrajanPro';
+  src: url('../fonts/trajan pro font/TrajanPro-Bold.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(90deg,rgba(239, 232, 213, 1) 0%, rgba(227, 220, 201, 1) 35%, rgba(232, 226, 206, 1) 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 80px;
+}
+
+.title h4 {
+    color: #a67b35;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 140px;
+    padding-top: 10px;
+    position: absolute;
+    top: 35px;
+    left: 10%;
+    bottom: 0;
+}
+
+.title p {
+    font-family: 'Hamilton', sans-serif;
+    font-size: 120px;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+}
+
+.desc {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.desc span {
+     color: #a67b35;
+     font-weight: bold;
+     font-size: 50px;
+     font-family: 'Trajan Pro';
+}
+
+.desc h5 {
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.desc p {
+    color: #a67b35;
+    font-family: 'HamiltonItalic', sans-serif;
+    font-size: 30px;
+}
+
+.bottom img {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    object-fit: contain;
+}
+
+.bottom p {
+    font-family: 'Trajan Pro', serif;
+    position: fixed;
+    color: white;
+    bottom: 20px;
+    right: 25%;
+    font-size: 30px;
+    word-spacing: 10px;
+}

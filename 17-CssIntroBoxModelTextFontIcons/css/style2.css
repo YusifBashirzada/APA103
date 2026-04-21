@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.p1 h4, .p2 h4 {
+    color: #396bb9;
+    width: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.p1 p, .p2 p {
+    max-width: 450px; 
+    font-family: Times, "Times New Roman", serif; 
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+.p1, .p2 {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.p2 p {
+    font-style: italic;
+    min-width: 180px;
+    font-weight: bold;
+}
