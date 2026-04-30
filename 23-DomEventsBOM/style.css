@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+#calculator {
+    width: 500px;
+    height: 300px;
+    background-color: rgb(0, 217, 255);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 80px auto;
+    border-radius: 10px;
+    box-shadow: 1px 3px 1px #7c7c7c;
+}
+
+#calculator h2 {
+    color: white;
+    text-shadow: 2px 4px 4px black;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#calculator input {
+    width: 200px;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.enterinput {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.total {
+    width: 200px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+button {
+    border: none;
+    padding: 6px 30px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 1px 0 2px #583939;
+    border-radius: 8px;
+}
+
+.plus {
+    background-color: rgb(0, 128, 90);
+}
+
+.minus {
+    background-color: rgb(255, 30, 30);
+}
+
+.mult {
+    background-color: rgb(89, 0, 255);
+}
+
+.divide {
+    background-color: #37ff00;
+}
