@@ -1,0 +1,38 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI\\Desktop\\APA103\\25-MVC Intro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{611BD56B-4297-4987-B51F-123C280ED132}|25-MVC Intro.csproj|c:\\users\\msi\\desktop\\apa103\\25-mvc intro\\views\\shared\\chrislayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{611BD56B-4297-4987-B51F-123C280ED132}|25-MVC Intro.csproj|solutionrelative:views\\shared\\chrislayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChrisLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\MSI\\Desktop\\APA103\\25-MVC Intro\\Views\\Shared\\ChrisLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\ChrisLayout.cshtml",
+              "ToolTip": "C:\\Users\\MSI\\Desktop\\APA103\\25-MVC Intro\\Views\\Shared\\ChrisLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\ChrisLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-04T20:27:21.688Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
