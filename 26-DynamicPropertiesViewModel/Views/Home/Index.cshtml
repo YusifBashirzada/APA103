@@ -1,0 +1,22 @@
+﻿@using _26_DynamicPropertiesViewModel.Models
+@using _26_DynamicPropertiesViewModel.ViewModels
+@model HomeVM;
+<h1>Welcome</h1>
+
+@* <h2>@TempData["Name"]</h2> *@
+
+<ul>
+	@foreach (Student student in Model.Students)
+	{
+		<li>@student.Id-@student.Name-@student.Age</li>
+	}
+</ul>
+
+<table style="border:1px solid black">
+	@foreach (Teacher teacher in Model.Teachers)
+	{
+		<tr>
+			<td>@teacher.Id-@teacher.Name-@teacher.Salary</td>
+		</tr>
+	}
+</table>

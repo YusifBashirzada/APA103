@@ -1,0 +1,13 @@
+﻿@using _26_DynamicPropertiesViewModel.Models
+@using _26_DynamicPropertiesViewModel.ViewModels
+@model HomeVM;
+<h1>Corporative Sales</h1>
+
+<h2>@TempData["Name"]</h2>
+
+<ul>
+	@foreach (Student student in Model.Students)
+	{
+		<li>@student.Id-@student.Name-@student.Age</li>
+	}
+</ul>
