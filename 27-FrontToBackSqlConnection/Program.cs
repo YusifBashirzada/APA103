@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
-    opt.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=ProniaaDB;Trusted_Connection=True;TrustServerCertificate=true");
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("default"));
 });
 
 var app = builder.Build();

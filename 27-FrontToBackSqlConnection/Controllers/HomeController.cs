@@ -2,6 +2,7 @@ using _27_FrontToBackSqlConnection.Data;
 using _27_FrontToBackSqlConnection.Models;
 using _27_FrontToBackSqlConnection.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace _27_FrontToBackSqlConnection.Controllers
 {
@@ -25,15 +26,25 @@ namespace _27_FrontToBackSqlConnection.Controllers
             //_context.AddRange(_sliders);
             //_context.SaveChanges();
 
+            //Product product = _context.Products.FirstOrDefault();
+
+            //Category category = _context.Categories.FirstOrDefault(c=>c.Id == product.CategoryId);
+
             List<Slider> sliders = _context.Sliders
                 .OrderBy(s => s.Order)
                 .Take(2)
                 .Where(s => !s.isDeleted)
                 .ToList();
 
+            List<Product> products = _context.Products
+                .Where(s => !s.isDeleted)
+                .Include(s => s.ProductImages)
+                .ToList();
+
             HomeVM homeVM = new()
             {
-                Sliders = sliders
+                Sliders = sliders,
+                Products = products
             };
 
             return View(homeVM);
