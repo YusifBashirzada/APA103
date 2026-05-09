@@ -21,7 +21,7 @@ namespace _27_FrontToBackSqlConnection.Controllers
         //    new Slider {Title = "Basliq-3", Subtitle = "Komekci Basliq-3", Description = "Gozel Tebiet", Image = "blueflower.webp", Order = 1, isDeleted = false},
         //};
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //_context.AddRange(_sliders);
             //_context.SaveChanges();
@@ -30,16 +30,16 @@ namespace _27_FrontToBackSqlConnection.Controllers
 
             //Category category = _context.Categories.FirstOrDefault(c=>c.Id == product.CategoryId);
 
-            List<Slider> sliders = _context.Sliders
+            List<Slider> sliders = await _context.Sliders
                 .OrderBy(s => s.Order)
                 .Take(2)
                 .Where(s => !s.isDeleted)
-                .ToList();
+                .ToListAsync();
 
-            List<Product> products = _context.Products
+            List<Product> products = await _context.Products
                 .Where(s => !s.isDeleted)
-                .Include(s => s.ProductImages)
-                .ToList();
+                .Include(s => s.ProductImages.Where(s=>s.IsPrimary != null))
+                .ToListAsync();
 
             HomeVM homeVM = new()
             {
