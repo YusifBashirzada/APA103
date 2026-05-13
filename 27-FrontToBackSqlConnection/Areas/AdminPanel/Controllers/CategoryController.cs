@@ -29,6 +29,7 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> Create(Category category)
         {
             if (!ModelState.IsValid)
@@ -45,6 +46,65 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
             }
 
             await _context.AddAsync(category);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Update(int? id) 
+        {
+            if (id is null || id < 1) return BadRequest();
+
+            Category existCategory = await _context.Categories
+                .Where(c => !c.isDeleted)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (existCategory is null) return NotFound();
+
+            return View(existCategory);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id, Category category)
+        {
+            if (id is null || id < 1) return BadRequest();
+
+            Category existCategory = await _context.Categories
+                .Where(c => !c.isDeleted)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (existCategory is null) return NotFound();
+
+            if (!ModelState.IsValid) return View();
+
+            bool result = await _context.Categories.AnyAsync(c=>c.Name == category.Name && c.Id != id);
+
+            existCategory.Name = category.Name;
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id is null || id < 1) return BadRequest();
+
+            Category existCategory = await _context.Categories
+                .Where(c => !c.isDeleted)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (existCategory is null) return NotFound();
+
+            _context.Categories.Remove(existCategory);
+
+            //existCategory.isDeleted = true;
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
