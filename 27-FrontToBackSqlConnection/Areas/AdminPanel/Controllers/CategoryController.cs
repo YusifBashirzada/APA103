@@ -53,7 +53,16 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
 
         public async Task<IActionResult> Detail(int? id)
         {
-            return View();
+            if (id == null || id < 1) return BadRequest();
+
+            Category? category = await _context.Categories
+                .Include(c => c.Products)
+                .Where(c => !c.isDeleted)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            if (category == null) return NotFound();
+
+            return View(category);
         }
 
         public async Task<IActionResult> Update(int? id) 

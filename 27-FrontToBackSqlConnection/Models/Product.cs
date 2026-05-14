@@ -1,8 +1,12 @@
-﻿namespace _27_FrontToBackSqlConnection.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace _27_FrontToBackSqlConnection.Models
 {
     public class Product:BaseEntity
     {
         public string Name { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
         public string Description { get; set; }
         public string SKU { get; set; }
