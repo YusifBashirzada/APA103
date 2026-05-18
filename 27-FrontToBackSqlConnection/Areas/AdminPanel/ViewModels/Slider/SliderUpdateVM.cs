@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.ViewModels
+namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.ViewModels.Slider
 {
     public class SliderUpdateVM
     {
