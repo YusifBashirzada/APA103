@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.ViewModels
 {
-    public class ProductCreateVM
+    public class ProductUpdateVM
     {
         public string Name { get; set; }
         public decimal Price { get; set; }

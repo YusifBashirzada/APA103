@@ -165,14 +165,12 @@
 								</li>
 							</ul>
 						</div>
-						<div class="product-category product-tags">
-							<span class="title">Tags :</span>
-							<ul>
-								<li>
-									<a href="#">Furniture</a>
-								</li>
-							</ul>
-						</div>
+					     @{
+							@if(Model.Product.ProductTags != null && Model.Product.ProductTags.Any())
+							{
+								
+							}
+						}
 						<div class="product-category social-link align-items-center pb-0">
 							<span class="title pe-3">Share:</span>
 							<ul>
