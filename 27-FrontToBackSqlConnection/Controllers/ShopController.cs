@@ -42,14 +42,14 @@ namespace _27_FrontToBackSqlConnection.Controllers
                 .ThenInclude(pt=>pt.Tag)
                 .FirstOrDefaultAsync(p=>p.Id == id);
 
-            if (product is null) return NotFound();
-
             List<Product> relatedProducts = await _context.Products
                 .Where(p=>!p.isDeleted)
                 .Include(p=>p.ProductImages.Where(pi=>pi.IsPrimary != null))
                 .Where(p=>p.CategoryId == product.CategoryId && p.Id != id)
                 .Take(2)
                 .ToListAsync();
+
+            if (product is null) return NotFound();
 
             DetailsVM detailsVM = new()
             {

@@ -29,11 +29,10 @@
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label for="name">Category</label>
-                        <select asp-for="CategoryId" class="form-control" asp-items="new SelectList(Model.Tags, nameof(Category.Id), nameof(Category.Name))">
-                            <option selected disabled>Choose Tag</option>
+                        <label for="TagIds">Tag</label>
+                        <select asp-for="TagIds" class="form-control" multiple asp-items="new SelectList(Model.Tags, nameof(Tag.Id), nameof(Tag.Name))">
                         </select>
-                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        <span asp-validation-for="TagIds" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label for="name">Description</label>

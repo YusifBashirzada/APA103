@@ -5,10 +5,20 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Create Product</h4>
-                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <form asp-controller="Product" asp-action="create" class="forms-sample" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input asp-for="Name" class="form-control" placeholder="Name" accept="image/*">
+                        <label for="name">MainImage</label>
+                        <input asp-for="MainPhoto" class="form-control" accept="image/*">
+                        <span asp-validation-for="MainPhoto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">SecondayImage</label>
+                        <input asp-for="HoverPhoto" class="form-control" accept="image/*">
+                        <span asp-validation-for="HoverPhoto" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Product Name</label>
+                        <input asp-for="Name" class="form-control" placeholder="Enter Product Name">
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -30,8 +40,7 @@
                     </div>
                     <div class="form-group">
                         <label for="TagIds">Tag</label>
-                        <select asp-for="TagIds" class="form-control" asp-items="new SelectList(Model.Tags, nameof(Tag.Id), nameof(Tag.Name))">
-                            <option selected disabled>Choose Tag</option>
+                        <select asp-for="TagIds" class="form-control" multiple asp-items="new SelectList(Model.Tags, nameof(Tag.Id), nameof(Tag.Name))">
                         </select>
                         <span asp-validation-for="TagIds" class="text-danger"></span>
                     </div>
@@ -41,7 +50,7 @@
                         <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
-                    <a asp-action="index" class="btn btn-light">Cancel</a>
+                    <a asp-controller="product" asp-action="index" class="btn btn-light">Cancel</a>
                 </form>
             </div>
         </div>
