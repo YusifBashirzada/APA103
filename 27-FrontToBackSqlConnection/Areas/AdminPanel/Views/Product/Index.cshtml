@@ -9,6 +9,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Product Table</h4>
+                @Html.Raw(TempData["FileInfo"])
                 <div class="table-responsive">
                     <a asp-controller="product" asp-action="create" class="btn btn-outline-success btn-fw">Create</a>
                     <table class="table table-striped">
