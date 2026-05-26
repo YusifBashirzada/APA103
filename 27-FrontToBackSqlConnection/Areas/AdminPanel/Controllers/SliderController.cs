@@ -1,4 +1,5 @@
-﻿using _27_FrontToBackSqlConnection.Areas.AdminPanel.ViewModels.Slider;
+﻿using _27_FrontToBackSqlConnection.Areas.AdminPanel.ViewModels;
+using _27_FrontToBackSqlConnection.Areas.AdminPanel.ViewModels.Slider;
 using _27_FrontToBackSqlConnection.Data;
 using _27_FrontToBackSqlConnection.Models;
 using _27_FrontToBackSqlConnection.Utilities.Enums;
@@ -34,6 +35,8 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SliderCreateVM sliderCreateVM)
         {
+            if (!ModelState.IsValid) return View(sliderCreateVM);
+
             if (!sliderCreateVM.Photo.CheckFileType("image/"))
             {
                 ModelState.AddModelError("Photo", "File type is incorrect!");
@@ -110,6 +113,51 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
             };
 
             return View(sliderUpdateVM);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id, SliderUpdateVM sliderUpdateVM)
+        {
+            if (id == null || id < 1) return BadRequest();
+
+            Slider? existSlider = await _context.Sliders
+                .FirstOrDefaultAsync(s => s.Id == id && !s.isDeleted);
+
+            if (existSlider == null) return NotFound();
+
+            sliderUpdateVM.Image = existSlider.Image;
+
+            if (!ModelState.IsValid) return View(sliderUpdateVM);
+
+            if (sliderUpdateVM.Photo is not null)
+            {
+
+                if (!sliderUpdateVM.Photo.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError(nameof(sliderUpdateVM.Photo), "File type is incorrect!");
+                    return View(sliderUpdateVM);
+                }
+                if (!sliderUpdateVM.Photo.CheckFileSize(FileSize.MB, 1))
+                {
+                    ModelState.AddModelError(nameof(sliderUpdateVM.Photo), "File size must be less than 2 mb!");
+                    return View(sliderUpdateVM);
+                }
+
+                if (!string.IsNullOrEmpty(existSlider.Image))
+                {
+                    existSlider.Image.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
+                }
+
+                existSlider.Image = await sliderUpdateVM.Photo.CreateFile(_env.WebRootPath, "assets", "images", "website-images");
+            }
+
+            existSlider.Title = sliderUpdateVM.Title;
+            existSlider.Subtitle = sliderUpdateVM.Subtitle;
+            existSlider.Description = sliderUpdateVM.Description;
+            existSlider.Order = sliderUpdateVM.Order;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

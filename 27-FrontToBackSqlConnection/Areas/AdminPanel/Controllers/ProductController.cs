@@ -59,6 +59,11 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
 
             if (!ModelState.IsValid) return View(productCreateVM);
 
+            if (productCreateVM.MainPhoto is null)
+            {
+                ModelState.AddModelError(nameof(productCreateVM.MainPhoto), "Main Photo is required");
+            }
+
             if (!productCreateVM.MainPhoto.CheckFileType("image/"))
             {
                 ModelState.AddModelError(nameof(productCreateVM.MainPhoto), "File type is incorrect!");
@@ -70,10 +75,14 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
                 return View(productCreateVM);
             }
 
+            if (productCreateVM.HoverPhoto is null)
+            {
+                ModelState.AddModelError(nameof(productCreateVM.HoverPhoto), "Hover Photo is required");
+            }
 
             if (!productCreateVM.HoverPhoto.CheckFileType("image/"))
             {
-                ModelState.AddModelError(nameof(productCreateVM.MainPhoto), "File type is incorrect!");
+                ModelState.AddModelError(nameof(productCreateVM.HoverPhoto), "File type is incorrect!");
                 return View(productCreateVM);
             }
             if (!productCreateVM.HoverPhoto.CheckFileSize(FileSize.MB, 1))
@@ -157,6 +166,55 @@ namespace _27_FrontToBackSqlConnection.Areas.AdminPanel.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id is null || id < 1) return BadRequest();
+
+            Product? product = await _context.Products
+                .Include(p => p.ProductTags)
+                .Include(p => p.ProductImages)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (product == null) return NotFound();
+
+            if (product.ProductImages is not null && product.ProductImages.Count > 0)
+            {
+                foreach (var productImage in product.ProductImages)
+                {
+                    if (!string.IsNullOrEmpty(productImage.Image))
+                    {
+                        productImage.Image.DeleteFile(_env.WebRootPath, "assets", "images", "website-images");
+                    }
+                }
+
+                _context.ProductImages.RemoveRange(product.ProductImages);
+            }
+
+            if (product.ProductTags is not null && product.ProductTags.Count > 0)
+            {
+                _context.ProductTags.RemoveRange(product.ProductTags);
+            }
+
+            _context.Products.Remove(product);
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id == null || id < 1) return BadRequest();
+
+            Product? product = await _context.Products
+                .Include(p => p.ProductImages)
+                .Include(p => p.ProductTags)
+                .ThenInclude(pt => pt.Tag)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            return View(product);
         }
 
         public async Task<IActionResult> Update(int? id)

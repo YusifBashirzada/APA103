@@ -1,0 +1,93 @@
+﻿@model Product
+
+<div class="row">
+    <div class="col-md-8 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Product Details: @Model.Name</h4>
+                <hr />
+
+                <div class="form-group">
+                    <label class="font-weight-bold">Product Images:</label>
+                    <div class="d-flex flex-wrap gap-3 mt-2">
+                        @if (Model.ProductImages is not null && Model.ProductImages.Count > 0)
+                        {
+                            @foreach (var productImage in Model.ProductImages)
+                            {
+                                if (string.IsNullOrWhiteSpace(productImage.Image) || productImage.Image.ToLower().Trim() == "null")
+                                {
+                                    continue;
+                                }
+
+                                <div class="text-center p-2 border rounded bg-light" style="width: 120px;">
+                                    <img style="width:100px; height:100px; object-fit:cover;"
+                                         src="~/assets/images/website-images/@productImage.Image" alt="Product Image" />
+
+                                    <div class="mt-2">
+                                        @if (productImage.IsPrimary == true)
+                                        {
+                                            <span style="display: inline-block; padding: 4px 8px; font-size: 12px; font-weight: bold; color: #fff; background-color: #28a745; border-radius: 4px;">Main</span>
+                                        }
+                                        else if (productImage.IsPrimary == false)
+                                        {
+                                            <span style="display: inline-block; padding: 4px 8px; font-size: 12px; font-weight: bold; color: #fff; background-color: #17a2b8; border-radius: 4px;">Hover</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="display: inline-block; padding: 4px 8px; font-size: 12px; font-weight: bold; color: #fff; background-color: #6c757d; border-radius: 4px;">Additional</span>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted">No images found for this product.</p>
+                        }
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="mt-4">
+                    <p><strong>ID:</strong> @Model.Id</p>
+                    <p><strong>Product Name:</strong> @Model.Name</p>
+                    <p><strong>Price:</strong> @Model.Price USD</p> <p><strong>SKU Code:</strong> @Model.SKU</p>
+                    <p><strong>Category ID:</strong> @Model.CategoryId</p>
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    <label class="font-weight-bold">Associated Tags:</label>
+                    <div class="mt-2">
+                        @if (Model.ProductTags is not null && Model.ProductTags.Count > 0)
+                        {
+                            @foreach (var pTag in Model.ProductTags)
+                            {
+                                <span class="badge badge-outline-primary m-1">#@pTag.Tag?.Name</span>
+                            }
+                        }
+                        else
+                        {
+                            <span class="text-muted">No tags assigned to this product.</span>
+                        }
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="form-group">
+                    <label class="font-weight-bold">Description:</label>
+                    <p class="bg-light p-3 border rounded">@Model.Description</p>
+                </div>
+
+                <div class="mt-4">
+                    <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-warning text-white">Update</a>
+                    <a asp-action="Index" class="btn btn-light">Back</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
