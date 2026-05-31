@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace _27_FrontToBackSqlConnection.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateIdentityTables : Migration
+    public partial class FixIdentityTablesScript : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

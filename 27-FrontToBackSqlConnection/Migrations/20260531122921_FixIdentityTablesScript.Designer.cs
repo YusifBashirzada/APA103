@@ -12,8 +12,8 @@ using _27_FrontToBackSqlConnection.Data;
 namespace _27_FrontToBackSqlConnection.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260526210937_CreateIdentityTables")]
-    partial class CreateIdentityTables
+    [Migration("20260531122921_FixIdentityTablesScript")]
+    partial class FixIdentityTablesScript
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

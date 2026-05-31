@@ -13,7 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {
-    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequireNonAlphanumeric = true;
     opt.Password.RequiredLength = 8;
 
     opt.User.RequireUniqueEmail = true;
